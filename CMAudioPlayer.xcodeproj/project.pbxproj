@@ -13,6 +13,11 @@
 		3F7CFCCD1E85873600FBC92D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CFCCB1E85873600FBC92D /* Main.storyboard */; };
 		3F7CFCCF1E85873600FBC92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CFCCE1E85873600FBC92D /* Assets.xcassets */; };
 		3F7CFCD21E85873600FBC92D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CFCD01E85873600FBC92D /* LaunchScreen.storyboard */; };
+		3F9B01281E8B54D800AF3597 /* CMRemotePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B01271E8B54D800AF3597 /* CMRemotePlayer.m */; };
+		3FE601AC1E95CF1400AACF17 /* NSURL+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE601AB1E95CF1400AACF17 /* NSURL+Custom.m */; };
+		3FE601AF1E95CFDD00AACF17 /* CMResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE601AE1E95CFDD00AACF17 /* CMResourceLoader.m */; };
+		3FE601B21E95D4EA00AACF17 /* CMRemotePlayerAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE601B11E95D4EA00AACF17 /* CMRemotePlayerAudioFile.m */; };
+		3FE601B51E95D78C00AACF17 /* CMRemotePlayerDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE601B41E95D78C00AACF17 /* CMRemotePlayerDownLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,16 @@
 		3F7CFCCE1E85873600FBC92D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7CFCD11E85873600FBC92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F7CFCD31E85873600FBC92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9B01261E8B54D800AF3597 /* CMRemotePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRemotePlayer.h; sourceTree = "<group>"; };
+		3F9B01271E8B54D800AF3597 /* CMRemotePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRemotePlayer.m; sourceTree = "<group>"; };
+		3FE601AA1E95CF1400AACF17 /* NSURL+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Custom.h"; sourceTree = "<group>"; };
+		3FE601AB1E95CF1400AACF17 /* NSURL+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Custom.m"; sourceTree = "<group>"; };
+		3FE601AD1E95CFDD00AACF17 /* CMResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMResourceLoader.h; sourceTree = "<group>"; };
+		3FE601AE1E95CFDD00AACF17 /* CMResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMResourceLoader.m; sourceTree = "<group>"; };
+		3FE601B01E95D4EA00AACF17 /* CMRemotePlayerAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRemotePlayerAudioFile.h; sourceTree = "<group>"; };
+		3FE601B11E95D4EA00AACF17 /* CMRemotePlayerAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRemotePlayerAudioFile.m; sourceTree = "<group>"; };
+		3FE601B31E95D78C00AACF17 /* CMRemotePlayerDownLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRemotePlayerDownLoader.h; sourceTree = "<group>"; };
+		3FE601B41E95D78C00AACF17 /* CMRemotePlayerDownLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRemotePlayerDownLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 		3F7CFCC11E85873600FBC92D /* CMAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				3F9B01251E8B54C100AF3597 /* RemotePlayer */,
 				3F7CFCC51E85873600FBC92D /* AppDelegate.h */,
 				3F7CFCC61E85873600FBC92D /* AppDelegate.m */,
 				3F7CFCC81E85873600FBC92D /* ViewController.h */,
@@ -77,6 +93,23 @@
 				3F7CFCC31E85873600FBC92D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F9B01251E8B54C100AF3597 /* RemotePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3F9B01261E8B54D800AF3597 /* CMRemotePlayer.h */,
+				3F9B01271E8B54D800AF3597 /* CMRemotePlayer.m */,
+				3FE601AD1E95CFDD00AACF17 /* CMResourceLoader.h */,
+				3FE601AE1E95CFDD00AACF17 /* CMResourceLoader.m */,
+				3FE601B31E95D78C00AACF17 /* CMRemotePlayerDownLoader.h */,
+				3FE601B41E95D78C00AACF17 /* CMRemotePlayerDownLoader.m */,
+				3FE601B01E95D4EA00AACF17 /* CMRemotePlayerAudioFile.h */,
+				3FE601B11E95D4EA00AACF17 /* CMRemotePlayerAudioFile.m */,
+				3FE601AA1E95CF1400AACF17 /* NSURL+Custom.h */,
+				3FE601AB1E95CF1400AACF17 /* NSURL+Custom.m */,
+			);
+			path = RemotePlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9B01281E8B54D800AF3597 /* CMRemotePlayer.m in Sources */,
 				3F7CFCCA1E85873600FBC92D /* ViewController.m in Sources */,
+				3FE601AF1E95CFDD00AACF17 /* CMResourceLoader.m in Sources */,
+				3FE601AC1E95CF1400AACF17 /* NSURL+Custom.m in Sources */,
+				3FE601B21E95D4EA00AACF17 /* CMRemotePlayerAudioFile.m in Sources */,
+				3FE601B51E95D78C00AACF17 /* CMRemotePlayerDownLoader.m in Sources */,
 				3F7CFCC71E85873600FBC92D /* AppDelegate.m in Sources */,
 				3F7CFCC41E85873600FBC92D /* main.m in Sources */,
 			);
@@ -310,6 +348,7 @@
 				3F7CFCD81E85873600FBC92D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
