@@ -237,16 +237,15 @@ static CMRemotePlayer * _shareInstance;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)playInterupt {
-    NSLog(@"播放被打断");
-    self.remoteAudioPlayerState = RemoteAudioPlayerStatePause;
-}
-
 - (void)playEnd {
     NSLog(@"播放完成");
     self.remoteAudioPlayerState = RemoteAudioPlayerStateStopped;
 }
 
+- (void)playInterupt {
+    NSLog(@"播放被打断");
+    self.remoteAudioPlayerState = RemoteAudioPlayerStatePause;
+}
 
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {

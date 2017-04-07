@@ -93,7 +93,8 @@
 /*
     处理缓存资源
  */
-#warning mark - 缓存处理播放上有问题
+#warning mark - Has wrong when audio cache play ,This error occurs when the user stops playing the audio, and when the user plays the audio again it will fail
+
 - (void)handleLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest
 {
     NSURL *url = loadingRequest.request.URL;
@@ -111,8 +112,11 @@
     
     NSData *subData = [data subdataWithRange:NSMakeRange(requestOffset, requestLength)];
     
+    // 该次请求的数据
     [loadingRequest.dataRequest respondWithData:subData];
+    // 结束该次请求
     [loadingRequest finishLoading];
+    
 }
 
 #pragma mark - AVAssetResourceLoaderDelegate
@@ -121,20 +125,18 @@
 {
     [self.loadRequests addObject:loadingRequest];
     
-    // 有效请求
-    AVAssetResourceLoadingRequest *loadingRt = self.loadRequests.firstObject;
+    NSURL *url = loadingRequest.request.URL;
     
-    NSURL *url = loadingRt.request.URL;
     // 处理本地缓存的请求资源
     if ([CMRemotePlayerAudioFile fileExistsWithAudioURL:url]) {
         
-        [self handleLoadingRequest:loadingRt];
+        [self handleLoadingRequest:loadingRequest];
         return YES;
     }
     
     // 下载无缓存资源
-    long long requestOffset = loadingRt.dataRequest.requestedOffset;
-    
+    long long requestOffset = loadingRequest.dataRequest.requestedOffset;
+
     if (self.downLoader.loadedSize == 0) {
         [self.downLoader downLoadWithURL:[url httpURL] offset:requestOffset];
         return YES;
@@ -146,7 +148,7 @@
         return YES;
     }
     
-    // 处理正在下载的资源
+    // 处理下载的资源
     [self handleAllLoadingRequests];
     
     return YES;
