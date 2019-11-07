@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "0D6DB827-3BBA-4E79-9146-44BFBA53E7D3"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "99AF4248-C857-4AC4-AEEA-926C7431A6A3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -19,6 +21,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "99AF4248-C857-4AC4-AEEA-926C7431A6A3 - 35354b15e5c0e784"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -34,6 +37,7 @@
                   offsetFromSymbolStart = "92">
                </Location>
                <Location
+                  uuid = "99AF4248-C857-4AC4-AEEA-926C7431A6A3 - 35354b15e5c0e784"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"

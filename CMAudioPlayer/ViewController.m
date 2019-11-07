@@ -70,6 +70,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self timer];
+    
+    UIButton *btn1 = [[UIButton alloc] init];
+    UIButton *btn2 = [[UIButton alloc] init];
+    UIButton *btn = [[UIButton alloc] init];
 }
 
 - (void)update {
