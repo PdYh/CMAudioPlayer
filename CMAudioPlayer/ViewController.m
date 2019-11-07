@@ -70,6 +70,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self timer];
+ 
+    NSURL *url1 = [NSURL URLWithString:@"http://audio.xmcdn.com/group22/M0B/60/85/wKgJM1g1g0ShoPalAJiI5nj3-yY200.m4a"];
+
+    NSURL *url2 = [NSURL URLWithString:@"http://audio.xmcdn.com/group22/M0B/60/85/wKgJM1g1g0ShoPalAJiI5nj3-yY200.m4a"];
+
+    NSURL *url3 = [NSURL URLWithString:@"http://audio.xmcdn.com/group22/M0B/60/85/wKgJM1g1g0ShoPalAJiI5nj3-yY200.m4a"];
+
 }
 
 - (void)update {
